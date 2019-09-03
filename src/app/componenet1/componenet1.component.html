@@ -3,19 +3,66 @@
     * {
     text-align: center;
     }
-    .spacer {
+    .pos {
+    position:absolute;
+    top: 60%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    }
+    .arrow{
+    position: relative;
+    display: inline-block;
+    padding: 0 0 0 16px;
+    color: #000;
+    text-align:center;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: 0px;
+}
+.arrow::before,
+.arrow::after{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: "";
+    vertical-align: middle;
+}
+
+.spacer {
     position: relative;
     height: 200px;
     width: 100%;
-    };
-    .full {
+};
+.full {
   height: 100%;
+}
+.sample::before{
+    width: 36px;
+    height: 36px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #1F64CC;
+}
+.sample::after{
+    left: 12px;
+    width: 9px;
+    height: 9px;
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
 }
 </style>
 <div class="spacer"></div>
 <div class="full">
-<ngx-typed-js [strings]="['HELLOwor..(  ՞ةڼ◔)ﾌｫﾝﾀﾞｵﾂﾝﾎﾞｮﾉ…','三└(┐卍^o^)卍ﾄﾞｩﾙﾙﾙﾙﾙ卍', 'にゃーん']" [showCursor]="false" [backSpeed]="30" [typeSpeed]="30" [shuffle]="true" [loop]="true">
+<ngx-typed-js [strings]="['(  ՞ةڼ◔)ﾌｫﾝﾀﾞｵﾂﾝﾎﾞｮﾉ…','書くことねえええ三└(┐卍^o^)卍ﾄﾞｩﾙﾙﾙﾙﾙ卍', 'にゃーん','PCは数回再起動します']" [showCursor]="false" [backSpeed]="30" [typeSpeed]="30" [shuffle]="false" [loop]="true">
 <h1 style="text-align: center; font-size: 3rem; position: relative;" class="typing"></h1>
 </ngx-typed-js>
 </div>
+<div class="pos" style="text-align:center;">
 <div class="spacer"></div>
+<a href="#" class="arrow sample" style="transition: 0.2s;"></a>
+</div>
