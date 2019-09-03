@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MarkdownModule } from 'ngx-markdown';
 
 import {NgxTypedJsModule} from 'ngx-typed-js';
-import {MatToolbarModule,MatIconModule, MatButtonModule, MatCardModule, MatCheckboxModule, MatTabsModule,MatMenuModule } from '@angular/material';
+import {MatGridListModule,MatToolbarModule,MatIconModule, MatButtonModule, MatCardModule, MatCheckboxModule, MatTabsModule,MatMenuModule } from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { Componenet1Component } from './componenet1/componenet1.component';
 import { Componenet2Component } from './componenet2/componenet2.component';
@@ -32,6 +32,7 @@ import { Componenet4Component } from './componenet4/componenet4.component';
     MatMenuModule,
     BrowserModule,
     MatCardModule,
+    MatGridListModule,
     MatIconModule,
     MarkdownModule.forRoot(),
     BrowserAnimationsModule,
