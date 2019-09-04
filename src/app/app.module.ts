@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MarkdownModule } from 'ngx-markdown';
+import { ParticlesModule } from 'angular-particle';
 
 import {NgxTypedJsModule} from 'ngx-typed-js';
 import {MatGridListModule,MatToolbarModule,MatIconModule, MatButtonModule, MatCardModule, MatCheckboxModule, MatTabsModule,MatMenuModule } from '@angular/material';
@@ -28,6 +29,7 @@ import { Componenet4Component } from './componenet4/componenet4.component';
   ],
   imports: [
     MatTabsModule,
+    ParticlesModule,
     MatToolbarModule,
     MatMenuModule,
     BrowserModule,

@@ -17,9 +17,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   title = 'angular-material-tab-router';
   navLinks: any[];
+  myStyle: object = {};
+  myParams: object = {};
+  width: number = 100;
+  height: number = 100;
   activeLinkIndex = -1;
+
  constructor(private router: Router) {
     this.navLinks = [
         {
@@ -41,15 +47,40 @@ export class AppComponent {
       },
     ];
 }
+
 ngOnInit(): void {
-  let options = {
-    strings: ["Product ", "Web ", "UX/UI"],
-    typeSpeed:200,
-    backSpeed:10,
-    showCursor: true,
-    cursorChar: "",
-    loop:true
-  }
+  this.myStyle = {
+    'position': 'fixed',
+    'width': '100%',
+    'height': '100%',
+    'z-index': -1,
+    'top': 0,
+    'left': 0,
+    'right': 0,
+    'bottom': 0,
+};
+
+this.myParams = {
+    particles: {
+        number: {
+            value: 80,
+            "density":{
+              "enable":true, //シェイプの密集度を変更するか否か
+              "value_area":200 //シェイプの密集度
+            }
+        },
+        stroke: {
+            color: '#000000'
+        },
+        color: {
+          color: '#000000'
+      },
+        shape: {
+            type: 'triangle',
+        },
+}
+};
+
   this.router.events.subscribe((res) => {
       this.activeLinkIndex = this.navLinks.indexOf(this.navLinks.find(tab => tab.link === '.' + this.router.url));
   });
