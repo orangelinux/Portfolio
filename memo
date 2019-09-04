@@ -1,0 +1,20 @@
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCoQHgb3WbuMMFAMQl8LOhvSqKlhwahKjE",
+    authDomain: "orange-26152.firebaseapp.com",
+    databaseURL: "https://orange-26152.firebaseio.com",
+    projectId: "orange-26152",
+    storageBucket: "",
+    messagingSenderId: "766594705822",
+    appId: "1:766594705822:web:2659009225c672b3a80e8f"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
