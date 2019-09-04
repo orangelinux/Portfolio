@@ -1,4 +1,26 @@
 <style>
+
+
+footer {
+  background-color: #ddd;
+  border-top: 1px solid #bbb;
+  text-align: center;
+}
+
+#clickFooter footer:hover {
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+#btmFooter {
+  align-self: flex-end;
+}
+
+#clickFooter {
+  position: relative;
+}
+
+
 .top1bar {
 background: linear-gradient(-135deg, #6DC3C7, #2E7CDC);
 background-size: 600% 600%;
@@ -48,3 +70,8 @@ animation: gradient 5s infinite;
     </a>  </nav>
   -->
     <router-outlet></router-outlet>
+    <footer class="md-padding">
+        <div id="btmFooter" flex>
+          <p>このページの作成者は(twitter)@0_a_eです。ページをコピーし、ユーザーを意図的に騙す行為は禁じます。また、<a style="color:black;" href="https://github.com/orangelinux/Portfolio" mat-button>ソースコードは公開されています。(ここをクリックで移動)</a></p>
+        </div>
+      </footer>
