@@ -22,21 +22,53 @@ footer {
 
 
 .top1bar {
-background: linear-gradient(-135deg, #6DC3C7, #2E7CDC);
+background: linear-gradient(-135deg, #6DC3C7, #2E7CDC,#250ac1,#ffffff);
 background-size: 600% 600%;
-animation: gradient 5s infinite;
+animation: gradient 6s infinite;
 }
-
+.icon:hover {
+animation: iconanim3 0.4s infinite;
+animation-iteration-count: 1;
+}
+.icon:active {
+  animation: iconanim 0.5s infinite;
+  animation-iteration-count: 1;
+}
 @keyframes gradient {
 0%{background-position:0% 50%}
-50%{background-position:100% 50%}
+50%{background-position:100% 100%}
 100%{background-position:0% 50%}
+}
+@keyframes iconanim {
+0%{transform:scale(1)}
+50%{transform:scale(0.9)}
+100%{transform: scale(1)}
+}
+@keyframes iconanim3 {
+0%{transform:scale(1)}
+50%{transform:scale(1.05)}
+100%{transform: scale(1)}
+}
+
+@keyframes iconanim2 {
+0%{transform:scale(1);
+transform: rotate(0deg);
+}
+/*50%{transform:scale(1.05);
+} */
+100%{transform: scale(1);
+transform:rotate(360deg);
+}
 }
 </Style>
 <mat-toolbar class="top1bar">
  <mat-toolbar-row>
-  <img src="assets/927lwvjo.jpg" width="50" style="border-radius: 50px;" height="50">
-  </mat-toolbar-row> 
+  <img src="assets/927lwvjo.jpg" class="icon" [matMenuTriggerFor]="appMenu" width="50" style="border-radius: 50px;" height="50">
+  <mat-menu #appMenu="matMenu">
+      <a href="/" mat-menu-item>ホーム</a>
+      <a href="https://twitter.com/0_a_e" mat-menu-item>Twitter</a>
+    </mat-menu>
+</mat-toolbar-row> 
 </mat-toolbar>
   <nav mat-tab-nav-bar>
     <a mat-tab-link
