@@ -1,5 +1,27 @@
 
 <style>
+    .imageback {
+    position: relative;
+    z-index: -6;
+   background-image: url("assets/background.jpg");
+   background-size: cover;
+  overflow: hidden; 
+    }
+   .imageback::before{
+    content: '';
+  background: inherit;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+    }
     * {
     text-align: center;
     }
@@ -27,6 +49,7 @@
     display: inline-block;
     padding: 0 0 0 16px;
     color: #000;
+    filter: blur(0px);
     text-align:center;
     vertical-align: middle;
     text-decoration: none;
@@ -35,7 +58,7 @@
 .arrow::before,
 .arrow::after{
     position: absolute;
-    top: 0;
+   top: 0;
     bottom: 0;
     left: 0;
     margin: auto;
@@ -45,11 +68,12 @@
 
 .spacer {
     position: relative;
-    height: 200px;
+    height: 176px;
     width: 100%;
 };
 .full {
   height: 100%;
+  filter: blur(0px);
 }
 .sample::before{
     width: 36px;
@@ -68,10 +92,11 @@
     transform: rotate(135deg);
 }
 </style>
+<div class="imageback">
 <div class="spacer"></div>
 <div class="full"  style="position: absolute; left: 0; right: 0; top: 50%; bottom: 0; margin: auto;" >
 <ngx-typed-js [strings]="['こんにちは',' 私はorange！ 〉(•‿•)','(  ՞ةڼ◔)ﾌｫﾝﾀﾞｵﾂﾝﾎﾞｮﾉ…']" [showCursor]="false" [backSpeed]="30" [typeSpeed]="30" [shuffle]="false" [loop]="true">
-<h1 style="position: relative; text-align: center; font-size: 3rem;" class="typing"></h1>
+<h1 style="position: relative; text-align: center; color:white; font-size: 3rem;" class="typing"></h1>
 </ngx-typed-js>
 </div>
 <div class="pos" style="text-align:center;">
@@ -80,6 +105,7 @@
 </div>
 <div class="spacer"></div>
 <div class="spacer"></div>
+</div>
 <section id="content">
 <h1>一応できなくはない言語とかOSとか...</h1>
 <p style="color:gray;">できるわけじゃないです。できるとか言うとできる人に怒られるレベルです。</p>
